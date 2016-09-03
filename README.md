@@ -1,2 +1,18 @@
 # AGWebStorage
-AGWebStorage is a wrapper for the Web Storage API and lets you use a number of useful methods and features
+
+## Installation ##
+---
+Just grab [agws.min.js] or [agws.js] and include them with a script tag.
+
+```
+#!html
+<script src="agws.min.js"></script>
+```
+
+## Supported Browsers ##
+---
+* Tested in Google Chrome
+
+## Compatibility ##
+---
+AGWebStorage is compatible with Ext JS 6 client-side proxies: LocalStorage and SessionStorage.
