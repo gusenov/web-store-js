@@ -2,7 +2,7 @@
 
 ## Installation ##
 ---
-Just grab [agws.min.js] or [agws.js] and include them with a script tag.
+Just grab [agws.min.js](agws.min.js) or [agws.js](agws.js) and include them with a script tag.
 
 ```
 #!html
