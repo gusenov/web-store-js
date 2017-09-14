@@ -1,6 +1,6 @@
 {
   "name": "web-store",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wrapper for the Web Storage API that lets you use a number of useful methods and features.",
   "main": "web-store.js",
   "scripts": {

@@ -385,7 +385,7 @@
             var foundRecordIndex = -1;
             this.forEachRecord(function (record, recordIndex) {
                 if (record.hasOwnProperty(property)
-                        && JSON.stringify(record[property]).match(value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'))) {
+                        && JSON.stringify(record[property]).match(value)) {
                     foundRecordIndex = recordIndex;
                     return true;
                 }
@@ -441,6 +441,23 @@
             this._removeRecordId(recordId);
             this._decSize();
             if (this.dataChanged) { this.dataChanged(); }
+        };
+        
+        /**
+         * The deleteRecordByIndex method deletes a record by the record index.
+         * @access public
+         * @memberof WebStore
+         * @method
+         * @param {number} recordIndex - A value that specifies the index position of the record in the [storage]{@link WebStore#storage}.
+         * @returns No return value.
+         */
+        WebStore.prototype.deleteRecordByIndex = function (recordIndex) {
+            // pre-condition
+            console.assert(typeof recordIndex === 'number', 'recordIndex should be number');
+
+            var record = this.getRecordByIndex(recordIndex),
+                recordId = record.id;
+            this.deleteRecordById(recordId);
         };
 
         /**
