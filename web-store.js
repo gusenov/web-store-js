@@ -385,7 +385,7 @@
             var foundRecordIndex = -1;
             this.forEachRecord(function (record, recordIndex) {
                 if (record.hasOwnProperty(property)
-                        && JSON.stringify(record[property]).match(value)) {
+                        && record[property].match(value)) {
                     foundRecordIndex = recordIndex;
                     return true;
                 }
