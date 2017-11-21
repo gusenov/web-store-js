@@ -1,4 +1,14 @@
-/*jslint browser: true, devel: true, nomen: true, node:true */
+/*jslint
+    nomen: true,
+    node: true
+*/
+/*eslint
+    no-console: "off"
+*/
+/*eslint-env
+    browser,
+    node
+*/
 
 (function () {
     "use strict";
@@ -382,12 +392,26 @@
          * @returns {number} The matched index or -1.
          */
         WebStore.prototype.find = function (property, value, startIndex) {
-            var foundRecordIndex = -1;
+            var foundRecordIndex = -1,
+                propertyValue;
             this.forEachRecord(function (record, recordIndex) {
-                if (record.hasOwnProperty(property)
-                        && record[property].match(value)) {
-                    foundRecordIndex = recordIndex;
-                    return true;
+                if (record.hasOwnProperty(property)) {
+                    propertyValue = record[property];
+                    if (typeof propertyValue === 'string') {
+                        if (typeof value === 'string') {
+                            if (propertyValue.match(value)) {
+                                foundRecordIndex = recordIndex;
+                                return true;
+                            }
+                        }
+                    } else if (typeof propertyValue === 'number') {
+                        if (typeof value === 'number') {
+                            if (propertyValue === value) {
+                                foundRecordIndex = recordIndex;
+                                return true;
+                            }
+                        }
+                    }
                 }
             }, startIndex);
             return foundRecordIndex;
