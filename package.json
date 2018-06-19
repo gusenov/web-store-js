@@ -1,30 +1,31 @@
 {
-  "name": "web-store",
-  "version": "0.0.5",
-  "description": "Wrapper for the Web Storage API that lets you use a number of useful methods and features.",
-  "main": "web-store.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gusenov/web-store-js.git"
-  },
-  "keywords": [
-    "javascript",
-    "javascript-library",
-    "localstorage",
-    "sessionstorage",
-    "webstorage",
-    "html5"
-  ],
-  "author": "Аббас Гусенов <gusenov@live.ru>",
-  "license": {
-      "type": "MIT",
-      "url": "https://www.opensource.org/licenses/mit-license.php"
-  },
-  "bugs": {
-    "url": "https://github.com/gusenov/web-store-js/issues"
-  },
-  "homepage": "https://github.com/gusenov/web-store-js#readme"
+    "name": "web-store",
+    "version": "0.0.5",
+    "description": "Wrapper for the Web Storage API that lets you use a number of useful methods and features.",
+    "main": "web-store.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "generate-documentation": "rm -rf ./docs/* && jsdoc --directory=./docs/ web-store.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gusenov/web-store-js.git"
+    },
+    "keywords": [
+        "javascript",
+        "javascript-library",
+        "localstorage",
+        "sessionstorage",
+        "webstorage",
+        "html5"
+    ],
+    "author": "Аббас Гусенов <gusenov@live.ru>",
+    "license": {
+        "type": "MIT",
+        "url": "https://www.opensource.org/licenses/mit-license.php"
+    },
+    "bugs": {
+        "url": "https://github.com/gusenov/web-store-js/issues"
+    },
+    "homepage": "https://github.com/gusenov/web-store-js#readme"
 }
